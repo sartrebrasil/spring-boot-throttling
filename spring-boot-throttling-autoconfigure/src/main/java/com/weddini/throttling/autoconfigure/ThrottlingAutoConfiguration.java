@@ -1,11 +1,5 @@
 package com.weddini.throttling.autoconfigure;
 
-import com.weddini.throttling.service.ThrottlingEvaluator;
-import com.weddini.throttling.service.ThrottlingEvaluatorImpl;
-import com.weddini.throttling.service.ThrottlingService;
-import com.weddini.throttling.service.ThrottlingServiceImpl;
-import com.weddini.throttling.support.ThrottlingBeanPostProcessor;
-import com.weddini.throttling.support.ThrottlingInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -16,6 +10,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import com.weddini.throttling.service.ThrottlingEvaluator;
+import com.weddini.throttling.service.ThrottlingEvaluatorImpl;
+import com.weddini.throttling.service.ThrottlingService;
+import com.weddini.throttling.service.ThrottlingServiceImpl;
+import com.weddini.throttling.support.ThrottlingBeanPostProcessor;
+import com.weddini.throttling.support.ThrottlingInterceptor;
 
 @Configuration
 @ConditionalOnClass(ThrottlingBeanPostProcessor.class)
